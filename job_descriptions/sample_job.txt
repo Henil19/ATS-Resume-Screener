@@ -1,0 +1,17 @@
+Python Developer
+
+Requirements:
+
+Python
+SQL
+Git
+Docker
+Machine Learning
+Pandas
+NumPy
+
+Responsibilities:
+
+Develop scalable applications.
+Work with databases.
+Collaborate with team members.
