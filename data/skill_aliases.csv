@@ -1,0 +1,78 @@
+alias,canonical_skill,category
+python,python,Programming Language
+python3,python,Programming Language
+py,python,Programming Language
+
+javascript,javascript,Programming Language
+js,javascript,Programming Language
+ecmascript,javascript,Programming Language
+
+java,java,Programming Language
+
+c,c,Programming Language
+c++,c++,Programming Language
+cpp,c++,Programming Language
+
+machine learning,machine learning,Artificial Intelligence
+ml,machine learning,Artificial Intelligence
+
+deep learning,deep learning,Artificial Intelligence
+dl,deep learning,Artificial Intelligence
+
+natural language processing,natural language processing,Artificial Intelligence
+nlp,natural language processing,Artificial Intelligence
+
+computer vision,computer vision,Artificial Intelligence
+cv,computer vision,Artificial Intelligence
+
+tensorflow,tensorflow,Framework
+tensor flow,tensorflow,Framework
+tf,tensorflow,Framework
+
+pytorch,pytorch,Framework
+torch,pytorch,Framework
+
+node.js,node.js,Web Development
+nodejs,node.js,Web Development
+node js,node.js,Web Development
+
+react.js,react.js,Web Development
+reactjs,react.js,Web Development
+react,react.js,Web Development
+
+express.js,express.js,Web Development
+expressjs,express.js,Web Development
+express,express.js,Web Development
+
+amazon web services,amazon web services,Cloud
+aws,amazon web services,Cloud
+
+google cloud platform,google cloud platform,Cloud
+gcp,google cloud platform,Cloud
+
+microsoft azure,microsoft azure,Cloud
+azure,microsoft azure,Cloud
+
+docker,docker,DevOps
+docker engine,docker,DevOps
+
+kubernetes,kubernetes,DevOps
+k8s,kubernetes,DevOps
+
+git,git,Version Control
+github,git,Version Control
+github.com,git,Version Control
+gitlab,git,Version Control
+
+mysql,mysql,Database
+postgresql,postgresql,Database
+postgres,postgresql,Database
+mongodb,mongodb,Database
+mongo,mongodb,Database
+
+numpy,numpy,Library
+pandas,pandas,Library
+scikit-learn,scikit-learn,Library
+sklearn,scikit-learn,Library
+
+cloud computing engineer developer, cloud computing engineer developer,Cloud

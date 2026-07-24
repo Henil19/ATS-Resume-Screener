@@ -2,13 +2,16 @@ Python Developer
 
 Requirements:
 
-Python
-SQL
-Git
-Docker
-Machine Learning
-Pandas
+Python3
+ML
+AWS
+NodeJS
+ReactJS
+Tensor Flow
+Github
+Docker Engine
 NumPy
+Pandas
 
 Responsibilities:
 

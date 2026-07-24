@@ -6,6 +6,7 @@ from utils.matcher import compare_skills
 from utils.skill_loader import load_skills
 from utils.score_calculator import calculate_score
 from utils.report_generator import generate_report,save_report
+from utils.alias_loader import load_aliases
 
 DEBUG = False
 
@@ -36,8 +37,9 @@ def main():
         print(clean_job)
 
     skills_database = load_skills("data/raw_skills.csv")
-    resume_skills = extract_skills(clean_resume, skills_database)
-    job_skills = extract_skills(clean_job, skills_database)
+    aliases = load_aliases("data/skill_aliases.csv")
+    resume_skills = extract_skills(clean_resume,aliases)
+    job_skills = extract_skills(clean_job,aliases)
 
     if DEBUG:
         print("\n===== RESUME SKILLS =====\n")
