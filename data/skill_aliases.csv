@@ -75,4 +75,101 @@ pandas,pandas,Library
 scikit-learn,scikit-learn,Library
 sklearn,scikit-learn,Library
 
-cloud computing engineer developer, cloud computing engineer developer,Cloud
+sql,sql,Database
+structured query language,sql,Database
+
+html,html,Web Development
+hypertext markup language,html,Web Development
+
+css,css,Web Development
+cascading style sheets,css,Web Development
+
+typescript,typescript,Programming Language
+ts,typescript,Programming Language
+
+bootstrap,bootstrap,Web Development
+
+tailwind css,tailwind css,Web Development
+tailwind,tailwind css,Web Development
+
+linux,linux,Operating System
+ubuntu,linux,Operating System
+debian,linux,Operating System
+
+bash,bash,Scripting
+shell scripting,bash,Scripting
+
+jenkins,jenkins,DevOps
+
+terraform,terraform,DevOps
+
+ansible,ansible,DevOps
+
+excel,excel,Data Analysis
+microsoft excel,excel,Data Analysis
+
+tableau,tableau,Data Visualization
+
+power bi,power bi,Data Visualization
+microsoft power bi,power bi,Data Visualization
+
+statistics,statistics,Data Science
+statistical analysis,statistics,Data Science
+
+data visualization,data visualization,Data Science
+data visualisation,data visualization,Data Science
+
+rest api,rest api,Web Development
+restful api,rest api,Web Development
+
+fastapi,fastapi,Framework
+fast api,fastapi,Framework
+
+flask,flask,Framework
+
+django,django,Framework
+
+opencv,opencv,Computer Vision
+
+langchain,langchain,Artificial Intelligence
+
+vector database,vector database,Artificial Intelligence
+vector databases,vector database,Artificial Intelligence
+
+rag,retrieval augmented generation,Artificial Intelligence
+retrieval augmented generation,retrieval augmented generation,Artificial Intelligence
+
+llm,large language models,Artificial Intelligence
+large language model,large language models,Artificial Intelligence
+large language models,large language models,Artificial Intelligence
+
+prompt engineering,prompt engineering,Artificial Intelligence
+
+generative ai,generative ai,Artificial Intelligence
+gen ai,generative ai,Artificial Intelligence
+
+scipy,scipy,Library
+
+matplotlib,matplotlib,Library
+
+seaborn,seaborn,Library
+
+xgboost,xgboost,Machine Learning
+
+lightgbm,lightgbm,Machine Learning
+
+catboost,catboost,Machine Learning
+
+apache spark,apache spark,Big Data
+spark,apache spark,Big Data
+
+apache kafka,apache kafka,Big Data
+kafka,apache kafka,Big Data
+
+hadoop,hadoop,Big Data
+
+airflow,airflow,Data Engineering
+apache airflow,airflow,Data Engineering
+
+etl,etl,Data Engineering
+extract transform load,etl,Data Engineering

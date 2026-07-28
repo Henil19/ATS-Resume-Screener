@@ -1,0 +1,68 @@
+alias,canonical_role
+ai engineer,ai_engineer
+ai developer,ai_engineer
+artificial intelligence engineer,ai_engineer
+artificial intelligence developer,ai_engineer
+generative ai engineer,ai_engineer
+gen ai engineer,ai_engineer
+llm engineer,ai_engineer
+rag engineer,ai_engineer
+
+machine learning engineer,machine_learning_engineer
+machine learning developer,machine_learning_engineer
+ml engineer,machine_learning_engineer
+ml developer,machine_learning_engineer
+deep learning engineer,machine_learning_engineer
+computer vision engineer,machine_learning_engineer
+nlp engineer,machine_learning_engineer
+
+data scientist,data_scientist
+senior data scientist,data_scientist
+junior data scientist,data_scientist
+lead data scientist,data_scientist
+
+data engineer,data_engineer
+big data engineer,data_engineer
+etl engineer,data_engineer
+analytics engineer,data_engineer
+
+data analyst,data_analyst
+business analyst,data_analyst
+business intelligence analyst,data_analyst
+bi analyst,data_analyst
+
+backend developer,backend_developer
+backend engineer,backend_developer
+backend software engineer,backend_developer
+backend programmer,backend_developer
+api developer,backend_developer
+
+frontend developer,frontend_developer
+frontend engineer,frontend_developer
+frontend software engineer,frontend_developer
+frontend programmer,frontend_developer
+ui developer,frontend_developer
+
+full stack developer,full_stack_developer
+full stack engineer,full_stack_developer
+full stack software engineer,full_stack_developer
+full stack programmer,full_stack_developer
+
+devops engineer,devops_engineer
+devops developer,devops_engineer
+site reliability engineer,devops_engineer
+sre engineer,devops_engineer
+platform engineer,devops_engineer
+
+cloud engineer,cloud_engineer
+cloud developer,cloud_engineer
+cloud architect,cloud_engineer
+aws engineer,cloud_engineer
+azure engineer,cloud_engineer
+gcp engineer,cloud_engineer
+
+software engineer,software_engineer
+software developer,software_engineer
+application developer,software_engineer
+application engineer,software_engineer
+programmer,software_engineer

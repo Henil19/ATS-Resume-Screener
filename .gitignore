@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 .vscode/
 outputs/*.txt
+.env
+.idea/
+.DS_Store
+Thumbs.db
+outputs/*.txt

@@ -26,10 +26,3 @@ def get_max_phrase_length(aliases):
             max_length = word_count
 
     return max_length
-
-if __name__ == "__main__":
-
-    aliases = load_aliases("data/skill_aliases.csv")
-    max_phrase_length = get_max_phrase_length(aliases)
-
-    print(aliases)

@@ -9,9 +9,3 @@ def tokenize(text):
     )
 
     return tokens
-
-if __name__ == "__main__":
-
-    sample = "Python SQL ML Node.js TensorFlow AWS React.js"
-
-    print(tokenize(sample))

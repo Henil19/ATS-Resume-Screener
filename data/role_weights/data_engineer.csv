@@ -1,0 +1,24 @@
+skill,weight
+python,9
+sql,10
+mongodb,8
+postgresql,8
+mysql,8
+amazon web services,9
+google cloud platform,8
+microsoft azure,8
+docker,8
+kubernetes,8
+linux,8
+bash,7
+terraform,7
+git,7
+pandas,8
+numpy,7
+data visualization,5
+machine learning,4
+apache spark,10
+apache kafka,9
+hadoop,9
+airflow,9
+etl,10
