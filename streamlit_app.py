@@ -9,6 +9,9 @@ from ui.skill_analysis import render_skill_analysis
 from ui.ai_assistant import render_ai_assistant
 from ui.analytics import render_analytics
 from ui.download import render_download
+from ui.semantic_analysis import render_semantic_analysis
+from ui.recommendations import render_recommendations
+from ui.resume_rewrite import render_resume_rewrite
 
 
 def main():
@@ -131,7 +134,13 @@ def main():
 
         render_skill_analysis(results)
 
+        render_semantic_analysis(results)
+
         render_ai_assistant(results)
+
+        render_resume_rewrite(results)
+
+        render_recommendations(results)
 
         render_analytics(results)
 

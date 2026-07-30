@@ -56,3 +56,5 @@ def render_ai_assistant(results):
         st.markdown("### 🎯 Hiring Recommendation")
 
         st.success(ai["hiring_recommendation"])
+
+        

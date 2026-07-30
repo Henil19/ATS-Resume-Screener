@@ -1,69 +1,117 @@
 # 🤖 ATS Resume Screener
 
-![Python](https://img.shields.io/badge/Python-3.14-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red)
-![Gemini](https://img.shields.io/badge/Google-Gemini_AI-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+> An AI-powered resume analysis platform that evaluates resumes against job descriptions using ATS scoring, semantic matching, explainable AI, and intelligent resume recommendations.
 
-An AI-powered Applicant Tracking System (ATS) Resume Screener that evaluates resumes against job descriptions using intelligent skill extraction, weighted ATS scoring, role detection, and Gemini-powered resume feedback.
-
-Built with **Python**, **Streamlit**, **Google Gemini**, and **Plotly**, this project transforms a traditional terminal-based ATS checker into a professional interactive web application.
+![Python](https://img.shields.io/badge/Python-3.14-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red?logo=streamlit)
+![Google Gemini](https://img.shields.io/badge/Google-Gemini%20AI-orange?logo=google)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## ✨ Features
+# 📌 Overview
 
-### 📄 Resume Processing
-- Upload PDF resumes
-- Upload TXT job descriptions
-- Automatic text extraction
-- Text cleaning and normalization
+ATS Resume Screener is an AI-powered web application that analyzes resumes against job descriptions using both traditional ATS techniques and modern AI.
 
-### 🎯 Intelligent Skill Matching
-- Alias-based skill extraction
-- Phrase matching
-- Resume vs Job skill comparison
-- Matched skills
-- Missing skills
-- Additional skills
+The project combines keyword-based ATS scoring with semantic similarity, explainable AI, resume rewriting suggestions, and career recommendations to provide meaningful insights for job seekers.
 
-### 🧠 Role Detection
-- Automatic job role detection
-- Role alias resolution
-- Role-specific skill weighting
-- Weighted ATS score calculation
-
-### 🤖 AI Resume Assistant (Gemini)
-- Professional resume summary
-- Resume strengths
-- Resume weaknesses
-- Missing technologies
-- Improvement suggestions
-- Project recommendations
-- Hiring recommendation
-
-### 📊 Analytics Dashboard
-- ATS score gauge
-- Skill distribution charts
-- Interactive Plotly visualizations
-
-### 🌐 Professional Web Application
-- Streamlit interface
-- Progress tracking
-- Error handling
-- Session state management
-- Download reports
-- Responsive layout
+Unlike traditional ATS tools that rely only on keyword matching, this project uses sentence embeddings and Large Language Models (LLMs) to better understand resume quality and provide actionable feedback.
 
 ---
 
-# 🏗 Architecture
+# ✨ Features
+
+## 📊 ATS Analysis
+
+- ATS Score Calculation
+- Role Detection
+- Role-Based Weighted Scoring
+- Skill Matching
+- Missing Skills Detection
+- Additional Skills Detection
+
+---
+
+## 🧠 Semantic Analysis
+
+- Sentence Embeddings
+- Resume vs Job Description Similarity
+- Semantic Skill Matching
+- Missing Concept Detection
+
+---
+
+## 🤖 AI Resume Assistant
+
+Powered by Google Gemini.
+
+Provides:
+
+- Professional Summary
+- Resume Strengths
+- Resume Weaknesses
+- Missing Technologies
+- Improvement Suggestions
+- Recommended Projects
+- Hiring Recommendation
+
+---
+
+## ✍ AI Resume Rewrite
+
+Automatically generates suggestions for improving:
+
+- Professional Summary
+- Experience
+- Projects
+- Technical Skills
+- ATS Keywords
+- Resume Formatting
+
+---
+
+## 🎯 Career Recommendations
+
+Suggests suitable job roles based on:
+
+- Resume Skills
+- ATS Score
+- Semantic Similarity
+- Role Confidence
+
+---
+
+## 📈 Analytics Dashboard
+
+Interactive dashboard displaying:
+
+- ATS Score
+- Resume Status
+- Skill Distribution
+- Semantic Analysis
+- Career Recommendations
+
+---
+
+## 📥 Download Report
+
+Generate a complete ATS report containing:
+
+- ATS Analysis
+- Skill Analysis
+- AI Feedback
+- Resume Rewrite Suggestions
+- Career Recommendations
+
+---
+
+# 🏗 System Architecture
 
 ```
                 Resume PDF
                      │
                      ▼
-              PDF Text Extractor
+              PDF Text Extraction
                      │
                      ▼
                Text Cleaning
@@ -75,231 +123,176 @@ Built with **Python**, **Streamlit**, **Google Gemini**, and **Plotly**, this pr
               Role Detection
                      │
                      ▼
-        Weighted ATS Score Engine
+          Weighted ATS Scoring
+                     │
+          ┌──────────┴──────────┐
+          ▼                     ▼
+ Semantic Analysis      Explainability
+          │                     │
+          └──────────┬──────────┘
+                     ▼
+              Gemini AI Assistant
+                     │
+        ┌────────────┼────────────┐
+        ▼            ▼            ▼
+ Resume Rewrite  AI Feedback  Career Advice
                      │
                      ▼
-          ATS Data Construction
-                     │
-                     ▼
-          Gemini AI Resume Assistant
-                     │
-                     ▼
-            Streamlit Dashboard
+             Streamlit Dashboard
 ```
 
 ---
 
-# 📁 Project Structure
+# ⚙ Technology Stack
+
+### Programming Language
+
+- Python
+
+### Frontend
+
+- Streamlit
+
+### AI
+
+- Google Gemini API
+
+### NLP
+
+- Sentence Transformers
+
+### Data Processing
+
+- NumPy
+- Pandas
+
+### PDF Processing
+
+- pdfplumber
+- pdfminer.six
+
+### Visualization
+
+- Plotly
+
+### Environment
+
+- python-dotenv
+
+---
+
+# 📂 Project Structure
 
 ```
 Resume_Screener/
-│
+
+├── data/
+├── job_descriptions/
+├── outputs/
+├── prompts/
+├── providers/
+├── resumes/
+├── tests/
+├── ui/
+├── utils/
 ├── app.py
 ├── streamlit_app.py
 ├── requirements.txt
 ├── README.md
-│
-├── data/
-│   ├── role_aliases.csv
-│   ├── skill_aliases.csv
-│   └── role_weights/
-│
-├── job_descriptions/
-│
-├── outputs/
-│
-├── prompts/
-│
-├── providers/
-│   └── gemini_provider.py
-│
-├── resumes/
-│
-├── tests/
-│   └── test_ats_engine.py
-│
-├── ui/
-│   ├── dashboard.py
-│   ├── skill_analysis.py
-│   ├── ai_assistant.py
-│   ├── analytics.py
-│   └── download.py
-│
-└── utils/
-    ├── ai_resume_assistant.py
-    ├── ats_data_builder.py
-    ├── ats_engine.py
-    ├── alias_loader.py
-    ├── job_reader.py
-    ├── matcher.py
-    ├── pdf_reader.py
-    ├── report_generator.py
-    ├── role_detector.py
-    ├── role_resolver.py
-    ├── role_weight_loader.py
-    ├── skill_extractor.py
-    ├── text_cleaner.py
-    ├── tokenizer.py
-    └── weighted_score_calculator.py
+└── .gitignore
 ```
 
 ---
 
-# ⚙ Installation
+# 🚀 Installation
 
-Clone the repository.
+Clone the repository
 
 ```bash
 git clone https://github.com/Henil19/ATS-Resume-Screener.git
 ```
 
-Go into the project.
+Move into the project directory
 
 ```bash
 cd ATS-Resume-Screener
 ```
 
-Install dependencies.
+Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate it
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
+Create a `.env` file
 
-# 🔑 Environment Variables
-
-Create a `.env` file in the project root.
-
-```env
+```
 GEMINI_API_KEY=YOUR_API_KEY
+GEMINI_MODEL=gemini-2.5-flash
 ```
 
-Replace `YOUR_API_KEY` with your Google Gemini API key.
-
 ---
 
-# 🚀 Running the Application
+# ▶ Running the Application
 
-Launch the Streamlit application.
+Launch the Streamlit application
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-The application will automatically open in your browser.
+---
+
+# 🧪 Running Tests
+
+Execute the complete test suite
+
+```bash
+python -m tests.run_phase7_tests
+```
 
 ---
 
-# 📋 Workflow
+# 📈 Development Journey
 
-1. Upload Resume (PDF)
-2. Upload Job Description (TXT)
-3. Click **Analyze Resume**
-4. ATS Engine processes both documents
-5. Role is detected automatically
-6. Weighted ATS score is calculated
-7. Gemini AI generates resume feedback
-8. Interactive dashboard displays results
-9. Download the ATS report
+The project was developed in multiple phases:
 
----
-
-# 📊 Outputs
-
-The application generates:
-
-- ATS Score
-- Matching Status
-- Detected Role
-- Matched Skills
-- Missing Skills
-- Additional Skills
-- AI Resume Summary
-- Strengths
-- Weaknesses
-- Improvement Suggestions
-- Recommended Projects
-- Hiring Recommendation
+- ✅ Phase 1 – ATS Resume Parsing
+- ✅ Phase 2 – ATS Scoring Engine
+- ✅ Phase 3 – Intelligent Skill Extraction
+- ✅ Phase 4 – Role Detection
+- ✅ Phase 5 – AI Resume Assistant
+- ✅ Phase 6 – Streamlit Web Application
+- ✅ Phase 7 – Semantic Analysis & AI Resume Rewrite
 
 ---
 
-# 🛠 Tech Stack
+# 🛣 Future Roadmap
 
-### Languages
-- Python
+Planned improvements include:
 
-### Frontend
-- Streamlit
-
-### AI
-- Google Gemini
-
-### Data Processing
-- Pandas
-- NumPy
-
-### PDF Processing
-- pdfplumber
-- pdfminer.six
-
-### Visualization
-- Plotly
-
-### Environment Management
-- python-dotenv
-
----
-
-# 🧪 Testing
-
-The project has been tested for:
-
-- ✅ Valid resume analysis
-- ✅ Missing resume upload
-- ✅ Missing job description
-- ✅ Invalid PDF handling
-- ✅ Empty job description
-- ✅ Strong resume matching
-- ✅ Weak resume matching
-- ✅ Report downloads
-- ✅ Analytics rendering
-- ✅ AI feedback generation
-- ✅ Temporary file cleanup
-- ✅ Responsive Streamlit interface
-
----
-
-# 🗺 Roadmap
-
-## ✅ Phase 1
-Core ATS Pipeline
-
-## ✅ Phase 2
-Professional ATS Scoring Engine
-
-## ✅ Phase 3
-Intelligent Skill Extraction
-
-## ✅ Phase 4
-Weighted ATS Scoring & Role Detection
-
-## ✅ Phase 5
-AI Resume Assistant (Gemini)
-
-## ✅ Phase 6
-Professional Streamlit Web Application
-
-## 🚧 Phase 7
-Advanced Resume Intelligence
-
----
-
-# 🤝 Contributing
-
-Contributions, suggestions, and improvements are welcome.
-
-Feel free to fork the repository and submit a pull request.
+- Embedding Cache
+- Recruiter Dashboard
+- Multi Resume Comparison
+- Batch Resume Processing
+- Cover Letter Generator
+- Interview Preparation Assistant
+- LinkedIn Profile Optimizer
+- Job Recommendation APIs
 
 ---
 
@@ -308,3 +301,11 @@ Feel free to fork the repository and submit a pull request.
 This project is licensed under the MIT License.
 
 ---
+
+# 👨‍💻 Author
+
+**Henil Patel**
+
+---
+
+## ⭐ If you found this project useful, consider giving it a star!

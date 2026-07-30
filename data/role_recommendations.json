@@ -1,0 +1,61 @@
+{
+    "Software Engineer": [
+        "Backend Developer",
+        "Full Stack Developer",
+        "Python Developer"
+    ],
+
+    "Data Scientist": [
+        "Machine Learning Engineer",
+        "AI Engineer",
+        "Data Analyst"
+    ],
+
+    "Frontend Developer": [
+        "UI Developer",
+        "React Developer",
+        "Web Developer"
+    ],
+
+    "Backend Developer": [
+        "Software Engineer",
+        "API Developer",
+        "Python Developer"
+    ],
+
+    "Machine Learning Engineer": [
+        "AI Engineer",
+        "Data Scientist",
+        "Deep Learning Engineer"
+    ],
+
+    "AI Engineer": [
+        "Machine Learning Engineer",
+        "Data Scientist",
+        "Computer Vision Engineer"
+    ],
+
+    "DevOps Engineer": [
+        "Cloud Engineer",
+        "Platform Engineer",
+        "Site Reliability Engineer"
+    ],
+
+    "Cloud Engineer": [
+        "DevOps Engineer",
+        "Platform Engineer",
+        "Solutions Architect"
+    ],
+
+    "Cybersecurity Analyst": [
+        "Security Engineer",
+        "Penetration Tester",
+        "SOC Analyst"
+    ],
+
+    "Mobile Developer": [
+        "Android Developer",
+        "iOS Developer",
+        "Flutter Developer"
+    ]
+}

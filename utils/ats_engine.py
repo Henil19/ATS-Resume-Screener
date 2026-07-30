@@ -13,6 +13,12 @@ from utils.ats_data_builder import build_ats_data
 from utils.ai_resume_assistant import generate_ai_feedback
 from utils.report_generator import generate_report
 from providers.gemini_provider import GeminiProvider
+from utils.semantic_engine import build_semantic_data
+from utils.explainability import generate_explanations
+from utils.rewrite_engine import build_rewrite_prompt
+from utils.recommendation_engine import generate_job_recommendations
+from utils.prompt_loader import load_prompt
+from utils.ai_rewrite_assistant import generate_resume_rewrite
 
 
 def run_ats_pipeline(
@@ -152,29 +158,93 @@ def run_ats_pipeline(
         extra
     )
 
+        # -----------------------------
+    # Semantic Analysis
+    # -----------------------------
+    update_progress(
+        "Running Semantic Analysis..."
+    )
+
+    semantic_data = build_semantic_data(
+        clean_resume,
+        clean_job,
+        resume_skills,
+        job_skills
+    )
+
+    # -----------------------------
+    # Explainability
+    # -----------------------------
+    update_progress(
+        "Generating Explainability..."
+    )
+
+    explainability_data = (
+        generate_explanations(
+            semantic_data
+        )
+    )
+
+    # -----------------------------
+    # Rewrite Prompt
+    # -----------------------------
+    update_progress(
+        "Preparing Resume Rewrite..."
+    )
+
+    rewrite_prompt = (
+        build_rewrite_prompt(
+            resume_text,
+            ats_data,
+            semantic_data,
+            explainability_data
+        )
+    )
+
     # -----------------------------
     # Load Prompt
     # -----------------------------
 
-    with open(
-        "prompts/resume_assistant_prompt.txt",
-        "r",
-        encoding="utf-8"
-    ) as file:
-
-        system_prompt = file.read()
+    system_prompt = load_prompt(
+    "prompts/resume_assistant_prompt.txt"
+    )
 
     # -----------------------------
     # AI Feedback
     # -----------------------------
 
     provider = GeminiProvider()
+    update_progress(
+    "Generating Resume Rewrite..."
+    )
+
+    rewrite_feedback = (
+        generate_resume_rewrite(
+            rewrite_prompt,
+            provider
+        )
+    )
     update_progress("Generating AI Feedback...")
 
     ai_feedback = generate_ai_feedback(
         ats_data,
         system_prompt,
         provider
+    )
+
+        # -----------------------------
+    # Job Recommendations
+    # -----------------------------
+    update_progress(
+        "Generating Recommendations..."
+    )
+
+    recommendation_data = (
+        generate_job_recommendations(
+            canonical_role,
+            semantic_data,
+            ats_score
+        )
     )
 
     # -----------------------------
@@ -196,13 +266,18 @@ def run_ats_pipeline(
     # -----------------------------
 
     return {
-        "role": canonical_role,
-        "ats_score": ats_score,
-        "status": status,
-        "matched": matched,
-        "missing": missing,
-        "extra": extra,
-        "ats_data": ats_data,
-        "ai_feedback": ai_feedback,
-        "report": report
+    "role": canonical_role,
+    "ats_score": ats_score,
+    "status": status,
+    "matched": matched,
+    "missing": missing,
+    "extra": extra,
+    "ats_data": ats_data,
+    "semantic_data": semantic_data,
+    "explainability_data": explainability_data,
+    "rewrite_prompt": rewrite_prompt,
+    "recommendation_data": recommendation_data,
+    "ai_feedback": ai_feedback,
+    "report": report,
+    "rewrite_feedback": rewrite_feedback,
     }

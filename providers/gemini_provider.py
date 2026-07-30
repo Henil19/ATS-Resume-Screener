@@ -7,44 +7,42 @@ from google import genai
 
 class GeminiProvider:
     """
-    Gemini AI Provider
+    Gemini AI Provider.
     """
 
     def __init__(self):
+        """
+        Initialize Gemini provider.
+        """
 
-        # Load environment variables
-        if not load_dotenv():
-            raise FileNotFoundError(
-                ".env file not found in the project root."
-            )
+        load_dotenv()
 
-        # Read API Key
-        api_key = os.getenv("GEMINI_API_KEY")
+        api_key = os.getenv(
+            "GEMINI_API_KEY"
+        )
 
         if not api_key:
+
             raise ValueError(
                 "GEMINI_API_KEY not found. Please check your .env file."
             )
 
-        # Read Model Name
-        model_name = os.getenv("GEMINI_MODEL")
+        self.model = os.getenv(
+            "GEMINI_MODEL",
+            "gemini-2.5-flash"
+        )
 
-        if not model_name:
-            raise ValueError(
-                "GEMINI_MODEL not found. Please check your .env file."
-            )
-
-        # Create Gemini Client
         self.client = genai.Client(
             api_key=api_key
         )
-
-        self.model = model_name
 
     def generate_response(
         self,
         prompt
     ):
+        """
+        Generate a response from Gemini.
+        """
 
         try:
 
